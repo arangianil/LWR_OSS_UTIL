@@ -1,0 +1,30 @@
+{
+  "name": "util-lwr-oss",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf node_modules __lwr_cache__ site",
+    "dev": "lwr dev",
+    "dev:compat": "lwr dev --mode compat",
+    "build": "lwr build --clean",
+    "build:prod-compat": "lwr build --clean --mode prod-compat",
+    "start": "lwr start",
+    "stage": "yarn build && yarn start",
+    "stage:prod-compat": "yarn build:prod-compat && yarn start",
+    "copyslds":"node ./scripts/copy-slds.mjs"
+  
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.25.3",
+    "lwc": "latest",
+    "lwr": "0.13.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "volta": {
+    "node": "20.15.1"
+  }
+}
